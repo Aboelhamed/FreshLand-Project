@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =====================
+Navbar
+===================== */
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  background: #0f5132;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #9ef01a;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+/* underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #9ef01a;
+  transition: 0.4s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #9ef01a;
+}
+
+/* Login Button */
+.login-btn {
+  border: 1px solid #9ef01a;
+  padding: 6px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #9ef01a;
+  color: #0f5132;
+}
+
+/* =====================
+Menu
+===================== */
+.menu-toggle {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* =====================
+Navbar Animation
+===================== */
+.animate-navbar {
+  animation: navSlide 1.2s ease forwards;
+}
+
+@keyframes navSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ================================================================*/
+/* products */
+
+body {
+  background-color: #fff;
+}
+
+.header {
+  text-align: center;
+  background-color: #fff;
+}
+
+.span {
+  background-color: #9ef01a;
+  color: #fff;
+  padding: 0px 20px;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0 0);
+}
+
+.head {
+  list-style: none;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  color: #000000;
+  cursor: pointer;
+}
+
+.head a {
+  border: 1px solid #000000;
+  text-decoration: none;
+  color: #000000;
+  background-color: #fff;
+  padding: 8px;
+  padding-inline: 40px;
+}
+
+.head a.active {
+  background-color: #000000;
+  color: #fff;
+}
+
+.hidden {
+  display: none;
+}
+
+.products-slider {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 50px;
+}
+
+.box {
+  text-align: center;
+  background-color: #ffffff;
+  position: relative;
+  margin: 3px;
+  border: 1px solid #bdbdbd;
+  padding: 15px;
+  border-radius: 25px;
+  transition: 0.4s;
+}
+
+.box:hover {
+  border: 1px solid #000000;
+  box-shadow: 1px 1px 20px 1px rgb(128, 128, 128);
+}
+
+.offers{
+  background-color: rgb(0, 196, 0);
+  font-family: cursive;
+  border-radius: 0 25px;
+  width: 20%;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+img {
+  padding: 40px;
+  width: 258px;
+  height: 195px;
+  border-radius: 40%;
+  transition: 0.3s;
+} 
+
+img:hover {
+  transform: scale(1.17);
+}
+
+.star {
+  color: gold;
+  margin-block: 5px;
+}
+
+.price {
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: cursive;
+}
+
+s {
+  text-decoration: line-through;
+  color: #5c5c5c;
+  font-size: 18px;
+  font-weight: lighter;
+  font-family: cursive;
+  margin-right: 15px;
+}
+
+hr {
+  margin-block: 12px;
+}
+
+button {
+  background-color: #828EAB;
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  position: absolute;
+  width: 145px;
+  top: 52%;
+  left: 0%;
+  border: 1px solid #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0;
+}
+
+button:hover {
+  background-color: #47526b;
+  transform: scaleX(1.2);
+}
+.box:hover button{
+  transform: translatex(50%);
+  opacity: 1;
+}

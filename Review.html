@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshLand</title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"rel="stylesheet">
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Patrick+Hand&display=swap" rel="stylesheet">
+  
+    <link rel="stylesheet" href="styles/Review.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <nav class="navbar animate-navbar">
+      <div class="logo">Fresh<span>Land</span></div>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a class="active" href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Feature</a></li>
+        <li><a href="product.html">Products</a></li>
+        <li><a href="#review">Review</a></li>
+        <li><a href="#">Card</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a class="login-btn" href="#">Login</a></li>
+      </ul>
+    </nav>
+
+
+
+<!-- ================= قسم المراجعات ================= -->
+<section class="review" id="review">
+
+    <h1 class="heading">
+        Customer <span>Reviews</span>
+    </h1>
+
+    <div class="review-grid">
+
+        <!-- ===== مراجعة 1 ===== -->
+        <div class="review-card">
+            <span class="badge">Fresh Today</span>
+            <div class="top">
+                <img src="https://i.pravatar.cc/100?img=21" alt="Ahmed">
+                <div>
+                    <h3>Ahmed Kamel ✔</h3>
+                    <small>120 orders • Vegetables 🥬</small>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>❝ Vegetables are extremely fresh as if just from the farm. Excellent quality and neat packaging. ❞</p>
+        </div>
+
+        <!-- ===== مراجعة 2 ===== -->
+        <div class="review-card">
+            <span class="badge">Quality Choice</span>
+            <div class="top">
+                <img src="https://i.pravatar.cc/100?img=22" alt="Sara">
+                <div>
+                    <h3>Sara Ali ✔</h3>
+                    <small>85 orders • Fruits 🍎</small>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>❝ Fruits taste very natural and fresh. I buy from them every week. ❞</p>
+        </div>
+
+        <!-- ===== مراجعة 3 ===== -->
+        <div class="review-card">
+            <span class="badge">Best Seller</span>
+            <div class="top">
+                <img src="https://i.pravatar.cc/100?img=23" alt="Omar">
+                <div>
+                    <h3>Omar Hassan ✔</h3>
+                    <small>60 orders • Fresh Meat 🥩</small>
+                </div>
+            </div>
+            <div class="stars">★★★★☆</div>
+            <p>❝ Meat is excellent, clean, and properly cut. Big difference in quality. ❞</p>
+        </div>
+
+        <!-- ===== مراجعة 4 ===== -->
+        <div class="review-card">
+            <span class="badge">Top Customer</span>
+            <div class="top">
+                <img src="https://i.pravatar.cc/100?img=24" alt="Menna">
+                <div>
+                    <h3>Menna Tarek ✔</h3>
+                    <small>150 orders • Weekly Basket 🛒</small>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>❝ I order weekly, and the quality is consistent every time. Truly reliable store. ❞</p>
+        </div>
+
+        <!-- ===== مراجعة 5 ===== -->
+        <div class="review-card">
+            <span class="badge">Trusted</span>
+            <div class="top">
+                <img src="https://i.pravatar.cc/100?img=25" alt="Youssef">
+                <div>
+                    <h3>Youssef Adel ✔</h3>
+                    <small>95 orders • Chicken 🐔</small>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>❝ Chicken is very fresh and delivery is fast. Hygiene is clearly a priority. ❞</p>
+        </div>
+
+        <!-- ===== مراجعة 6 ===== -->
+        <div class="review-card">
+            <span class="badge">Organic</span>
+            <div class="top">
+                <img src="https://i.pravatar.cc/100?img=26" alt="Nour">
+                <div>
+                    <h3>Nour Khaled ✔</h3>
+                    <small>70 orders • Organic 🌿</small>
+                </div>
+            </div>
+            <div class="stars">★★★★★</div>
+            <p>❝ Organic products are amazing and taste unique. Very reasonable prices. ❞</p>
+        </div>
+
+    </div>
+
+    <!-- ================= فورم إضافة مراجعة ================= -->
+    <div class="review-form">
+        <h2>Add Your Review</h2>
+        <form>
+            <!-- الاسم -->
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <!-- المنتج / النوع -->
+            <label for="product">Product / Type</label>
+            <input type="text" id="product" placeholder="Vegetables, Meat, Fruits...">
+
+            <!-- التقييم -->
+            <label for="rating">Rating</label>
+            <select id="rating">
+                <option value="5">★★★★★ - Excellent</option>
+                <option value="4">★★★★☆ - Very Good</option>
+                <option value="3">★★★☆☆ - Good</option>
+                <option value="2">★★☆☆☆ - Fair</option>
+                <option value="1">★☆☆☆☆ - Poor</option>
+            </select>
+
+            <!-- نص المراجعة -->
+            <label for="review">Review</label>
+            <textarea id="review" placeholder="Write your review..."></textarea>
+
+            <!-- زر الإرسال -->
+            <button type="submit">Submit Review</button>
+        </form>
+    </div>
+
+</section>
+
+</body>
+</html>
