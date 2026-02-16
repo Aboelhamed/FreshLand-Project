@@ -7,10 +7,10 @@ button.forEach(btn => {
   });
 });
 // ========================================
-const buttons = document.querySelectorAll(".head a"); // كل روابط التصنيف
-const products = document.querySelectorAll("[data-category]"); // كل المنتجات
+const b = document.querySelectorAll(".head a"); 
+const products = document.querySelectorAll("[data-category]");
 
-buttons.forEach(btn => {
+b.forEach(btn => {
   btn.addEventListener("click", () => {
     const filter = btn.getAttribute("data-filter");
 
@@ -21,5 +21,34 @@ buttons.forEach(btn => {
         box.classList.add("hidden");
       }
     });
+  });
+});
+
+
+// =============================================================
+let btn = document.querySelectorAll('.box button');
+
+btn.forEach(btns => {
+  btns.addEventListener("click", () => {
+
+    const filter = btns.closest(".box");
+
+    let name = filter.querySelector('h3').innerText;
+    let imgSrc = filter.querySelector('img').src;
+    let price = parseFloat(filter.querySelector('b').innerText);
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let product = {
+      name: name,
+      img: imgSrc,
+      price: price
+    };
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert("Product Added To Cart ✅");
   });
 });

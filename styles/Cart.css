@@ -1,0 +1,147 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* =====================
+Navbar
+===================== */
+.navbar {
+  width: 100%;
+  padding: 15px 40px;
+  background: #0f5132;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.logo span {
+  color: #9ef01a;
+}
+
+/* Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  position: relative;
+  padding-bottom: 5px;
+  transition: 0.3s;
+}
+
+/* underline animation */
+.nav-links li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: #9ef01a;
+  transition: 0.4s;
+}
+
+.nav-links li a:hover::after,
+.nav-links li a.active::after {
+  width: 100%;
+}
+
+.nav-links li a:hover {
+  color: #9ef01a;
+}
+
+/* Login Button */
+.login-btn {
+  border: 1px solid #9ef01a;
+  padding: 6px 15px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background: #9ef01a;
+  color: #0f5132;
+}
+
+/* =====================
+Menu
+===================== */
+.menu-toggle {
+  width: 30px;
+  cursor: pointer;
+  display: none;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 3px;
+  background: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* =====================
+Navbar Animation
+===================== */
+.animate-navbar {
+  animation: navSlide 1.2s ease forwards;
+}
+
+@keyframes navSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ====================================================== */
+.header {
+  text-align: center;
+  background-color: #fff;
+}
+
+.span {
+  background-color: #9ef01a;
+  color: #fff;
+  padding: 0px 20px;
+  clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0 0);
+}
