@@ -51,5 +51,5 @@ loginForm.addEventListener ('submit', function (ev)
 
     loginForm.reset();
 
-    window.location.href = '../../index.html';
+    window.location.href = 'index.html';
 });
