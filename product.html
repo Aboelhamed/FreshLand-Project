@@ -1,38 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>FreshLand</title>
-      <link rel="stylesheet" href="styles/product.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Patrick+Hand&display=swap" rel="stylesheet">
-  </head>
-  <body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>FreshLand</title>
+        <link rel="stylesheet" href="CSS/product.css">
+        <link rel="stylesheet" href="CSS/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    </head>
+    <body>
     <nav class="navbar animate-navbar">
-      <div class="logo">Fresh<span>Land</span></div>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+        <div class="logo">Fresh<span>Land</span></div>
+        <div class="menu-toggle" id="menuToggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Feature</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="Review.html">Review</a></li>
-        <li><a href="Cart.html">Card</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a class="login-btn" href="#">Login</a></li>
-      </ul>
-    </nav>
-
+        <ul class="nav-links" id="navLinks">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html#aboutus">AboutUs</a></li>
+            <li><a href="index.html#features">Feature</a></li>
+            <li><a href="product.html#product">Products</a></li>
+            <li><a href="index.html#review">Review</a></li>
+            <li><a href="cart.html#cart">Cart</a></li>
+            <li><a href="index.html#footer">Contact</a></li>
+            <li><a class="login-btn" href="login.html">Login</a></li>
+        </ul>
+        </nav>
+<!-- ------------------------------------------ -->
     <section class="products" id="products">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
       
@@ -292,6 +295,62 @@
         </div>
     </section>
 
-    <script src="scripts/product.js"></script>
+    
+    <!--------------------------------------------footer Section----------------------------------------------->
+    <footer class="footer" id="footer">
+      <div class="footer-top">
+
+        <!-- Column 1 -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <a href="#">Home</a>
+          <a href="#">Products</a>
+          <a href="#">Features</a>
+          <a href="#">Reviews</a>
+          <a href="#">Card</a>
+        </div>
+
+        <!-- Column 2 -->
+        <div class="footer-col">
+          <h4>About</h4>
+          <a href="#">About Us</a>
+          <a href="#">Our Mission</a>
+          <a href="#">Why Fresh?</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact</a>
+        </div>
+
+        <!-- Column 3 -->
+        <div class="footer-col">
+          <h4>Help</h4>
+          <a href="#">FAQ</a>
+          <a href="#">Shipping</a>
+          <a href="#">Returns</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+        </div>
+
+        <!-- Column 4 -->
+        <div class="footer-col">
+          <h4>Follow Us</h4>
+
+          <div class="footer-social">
+            <a href="#" class="facebook">Facebook</a>
+            <a href="#" class="whatsapp">WhatsApp</a>
+            <a href="#" class="instagram">Instagram</a>
+            <a href="#" class="tiktok">TikTok</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom
+      <div class="footer-bottom">
+        <p>
+          © 2026 FreshLand. All Rights Reserved.
+        </p>
+      </div> -->
+    </footer>
+
+    <script src="JS/product .js"></script>
 
   </body>

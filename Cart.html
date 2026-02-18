@@ -7,62 +7,54 @@
       <link rel="preconnect" href="https://fonts.googleapis.com">
       <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="styles/Cart.css">
+      <link rel="stylesheet" href="CSS/Cart.css">
   </head>
   <body>
-    <nav class="navbar">
+    <nav class="navbar animate-navbar">
       <div class="logo">Fresh<span>Land</span></div>
-      <ul class="nav-links">
-        <li><a href="#">Home</a></li>
-        <li><a href="product.html">Products</a></li>
-        <li><a href="Review.html">Review</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><a class="login-btn" href="#">Login</a></li>
-        <li>
-          <div class="cart-icon-wrapper" onclick="toggleCart()">
-            <span>🛒 Cart</span>
-            <span class="cart-badge" id="badge">0</span>
-          </div>
-        </li>
-      </ul>
-    </nav>
+      <div class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html#aboutus">AboutUs</a></li>
+            <li><a href="index.html#features">Feature</a></li>
+            <li><a href="product.html#product">Products</a></li>
+            <li><a href="index.html#review">Review</a></li>
+            <li><a href="cart.html#cart">Cart</a></li>
+            <li><a href="index.html#footer">Contact</a></li>
+            <li><a class="login-btn" href="login.html">Login</a></li>
+        </ul>
+        </nav>
 
-    <!-- Mini Cart -->
-    <div class="mini-cart" id="miniCart">
-      <div class="mini-cart-header"><strong>Your Cart</strong> <span onclick="toggleCart()" style="cursor:pointer">✕</span></div>
-      <div id="miniItems"></div>
-      <div class="mini-cart-total"><span>Total:</span><span id="miniTotal">$0</span></div>
-      <button class="mini-cart-checkout" onclick="openPay()">Checkout</button>
-    </div>
+    <section class="cart" id="cart">
 
-    <!-- Main Cart -->
-    <section class="cart">
-      <h1 class="header"> Your <span class="span"> Cart </span></h1>
-      <table>
-        <thead><tr><th>Product</th><th>Image</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr></thead>
-        <tbody id="mainTable"></tbody>
-      </table>
+
+    <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Image</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Total</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
+
+    </section>
+    
       <div class="cart-summary">
-        <div class="total-row final"><span>Total:</span><span id="mainTotal">$0</span></div>
+        <h3>Total Salary: <span class="total_salary">0</span></h3>
         <button class="checkout-btn" onclick="openPay()">Checkout</button>
       </div>
-    </section>
 
-    <!-- Payment -->
-    <div class="payment-modal" id="payModal">
-      <div class="payment-box">
-        <div class="payment-title">💳 Payment</div>
-        <div class="payment-options">
-          <div class="payment-option selected" onclick="selectPay(this, 'card')"><div class="payment-option-icon">💳</div><div>Card</div></div>
-          <div class="payment-option" onclick="selectPay(this, 'paypal')"><div class="payment-option-icon">🅿️</div><div>PayPal</div></div>
-          <div class="payment-option" onclick="selectPay(this, 'cod')"><div class="payment-option-icon">💵</div><div>Cash</div></div>
-        </div>
-        <div class="payment-form show" id="cardForm"><input class="form-input" placeholder="Card Number"><input class="form-input" placeholder="Name"><input class="form-input" placeholder="MM/YY"></div>
-        <div class="payment-form" id="paypalForm"><input class="form-input" placeholder="PayPal Email"></div>
-        <div class="payment-form" id="codForm" style="text-align:center;padding:20px">Pay when you receive!</div>
-        <button class="pay-btn" onclick="pay()">Pay Now</button>
-      </div>
-    </div>
+
 
     <script src="scripts/Cart.js"></script>
   </body>
