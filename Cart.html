@@ -3,60 +3,67 @@
   <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>FreshLand</title>
+      <title>FreshLand - Shopping Cart</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
       <link rel="stylesheet" href="styles/Cart.css">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap"rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Patrick+Hand&display=swap" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar animate-navbar">
+    <nav class="navbar">
       <div class="logo">Fresh<span>Land</span></div>
-      <div class="menu-toggle" id="menuToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-
-      <ul class="nav-links" id="navLinks">
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Feature</a></li>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
         <li><a href="product.html">Products</a></li>
         <li><a href="Review.html">Review</a></li>
-        <li><a href="#cart">Card</a></li>
         <li><a href="#">Contact</a></li>
         <li><a class="login-btn" href="#">Login</a></li>
+        <li>
+          <div class="cart-icon-wrapper" onclick="toggleCart()">
+            <span>🛒 Cart</span>
+            <span class="cart-badge" id="badge">0</span>
+          </div>
+        </li>
       </ul>
     </nav>
 
-        <!-- ============================== -->
+    <!-- Mini Cart -->
+    <div class="mini-cart" id="miniCart">
+      <div class="mini-cart-header"><strong>Your Cart</strong> <span onclick="toggleCart()" style="cursor:pointer">✕</span></div>
+      <div id="miniItems"></div>
+      <div class="mini-cart-total"><span>Total:</span><span id="miniTotal">$0</span></div>
+      <button class="mini-cart-checkout" onclick="openPay()">Checkout</button>
+    </div>
 
-    <section class="cart" id="cart">
-        <br><br><br><br><br><br>
-    <h1 class="header"> Your <span class="span"> Cart </span></h1><br><br><br><br>
-
-    <table style="margin: auto;">
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Image</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody></tbody>
-</table>
+    <!-- Main Cart -->
+    <section class="cart">
+      <h1 class="header"> Your <span class="span"> Cart </span></h1>
+      <table>
+        <thead><tr><th>Product</th><th>Image</th><th>Price</th><th>Qty</th><th>Total</th><th></th></tr></thead>
+        <tbody id="mainTable"></tbody>
+      </table>
+      <div class="cart-summary">
+        <div class="total-row final"><span>Total:</span><span id="mainTotal">$0</span></div>
+        <button class="checkout-btn" onclick="openPay()">Checkout</button>
+      </div>
     </section>
 
-<h2 style="text-align: center;">Total: <span class="total_salary" style="text-align: center;">0</span></h2>
+    <!-- Payment -->
+    <div class="payment-modal" id="payModal">
+      <div class="payment-box">
+        <div class="payment-title">💳 Payment</div>
+        <div class="payment-options">
+          <div class="payment-option selected" onclick="selectPay(this, 'card')"><div class="payment-option-icon">💳</div><div>Card</div></div>
+          <div class="payment-option" onclick="selectPay(this, 'paypal')"><div class="payment-option-icon">🅿️</div><div>PayPal</div></div>
+          <div class="payment-option" onclick="selectPay(this, 'cod')"><div class="payment-option-icon">💵</div><div>Cash</div></div>
+        </div>
+        <div class="payment-form show" id="cardForm"><input class="form-input" placeholder="Card Number"><input class="form-input" placeholder="Name"><input class="form-input" placeholder="MM/YY"></div>
+        <div class="payment-form" id="paypalForm"><input class="form-input" placeholder="PayPal Email"></div>
+        <div class="payment-form" id="codForm" style="text-align:center;padding:20px">Pay when you receive!</div>
+        <button class="pay-btn" onclick="pay()">Pay Now</button>
+      </div>
+    </div>
 
-
-
-    <script src="scripts/product.js"></script>
     <script src="scripts/Cart.js"></script>
-
-</body>
+  </body>
 </html>

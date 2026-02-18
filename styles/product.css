@@ -136,6 +136,7 @@ Navbar Animation
 
 body {
   background-color: #fff;
+  margin-top: 120px;
 }
 
 .header {
@@ -148,6 +149,39 @@ body {
   color: #fff;
   padding: 0px 20px;
   clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0 0);
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-block: 60px 40px;
+    gap: 10px;
+}
+
+#input {
+    padding: 10px 15px;
+    width: 300px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#btn {
+    background-color: #0f5132;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    position: static; 
+    opacity: 1; 
+    width: auto; 
+}
+
+#btn:hover {
+    background-color: #9ef01a;
+    color: #0f5132;
+    transform: scale(1.05);
 }
 
 .head {
@@ -250,8 +284,8 @@ hr {
 }
 
 button {
-  background-color: #828EAB;
-  color: rgb(255, 255, 255);
+  background-color: #9ef01a;
+  color: #0f5132(255, 255, 255);
   padding: 10px 20px;
   position: absolute;
   width: 145px;
@@ -264,7 +298,8 @@ button {
 }
 
 button:hover {
-  background-color: #47526b;
+  background-color: #0f5132;
+  color: #fff;
   transform: scaleX(1.2);
 }
 .box:hover button{

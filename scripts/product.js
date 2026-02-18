@@ -1,4 +1,5 @@
 const button = document.querySelectorAll(".head a");
+document.querySelectorAll(".head a")[0].classList.add("active");
 
 button.forEach(btn => {
   btn.addEventListener("click", () => {
@@ -7,23 +8,24 @@ button.forEach(btn => {
   });
 });
 // ========================================
-const b = document.querySelectorAll(".head a"); 
-const products = document.querySelectorAll("[data-category]");
+const a = document.querySelectorAll(".head a"); 
+const products = document.querySelectorAll("[category]");
 
-b.forEach(btn => {
+a.forEach(btn => {
   btn.addEventListener("click", () => {
-    const filter = btn.getAttribute("data-filter");
-
+    const filter = btn.getAttribute("filter");
+    console.log(filter);
+    
     products.forEach(box => {
-      if (filter === "all" || box.getAttribute("data-category") === filter) {
+      box.classList.add("hidden");
+      if (filter === "all")
         box.classList.remove("hidden");
-      } else {
-        box.classList.add("hidden");
-      }
+      else if (box.getAttribute("category") === filter)
+        box.classList.remove("hidden");
+
     });
   });
 });
-
 
 // =============================================================
 let btn = document.querySelectorAll('.box button');
@@ -51,4 +53,32 @@ btn.forEach(btns => {
 
     alert("Product Added To Cart ✅");
   });
+});
+
+// =============================================================
+const Sinput = document.getElementById("input");
+const Sbutton = document.getElementById("btn");
+
+const filter = () => {
+  const searchvalue = Sinput.value.toLowerCase();
+  const boxes = document.querySelectorAll(".box");
+
+  boxes.forEach(box => {
+    const name = box.querySelector("h3").innerText.toLowerCase();
+    const parent = box.parentElement;
+
+    parent.classList.add("hidden");
+
+    if (name.includes(searchvalue))
+      parent.classList.remove("hidden");
+
+  });
+};
+
+Sbutton.addEventListener("click", filter);
+
+Sinput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    filter();
+  }
 });
