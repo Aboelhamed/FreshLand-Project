@@ -49,19 +49,25 @@ btn.forEach(btns => {
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-    let product = {
-      name: name,
-      img: imgSrc,
-      price: price
-    };
+    let existingProduct = cart.find(item => item.name === name);
 
-    cart.push(product);
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({
+        name: name,
+        img: imgSrc,
+        price: price,
+        quantity: 1
+      });
+    }
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
     alert("Product Added To Cart ✅");
   });
 });
+
 
 // =============================================================
 const Sinput = document.getElementById("input");
