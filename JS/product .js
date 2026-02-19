@@ -91,11 +91,7 @@ const filter = () => {
 
 Sbutton.addEventListener("click", filter);
 
-Sinput.addEventListener("keypress", (e) => {
-  if (e.key === "Enter") {
-    filter();
-  }
-});
+Sinput.addEventListener("keydown",filter);
 
 ///////////////////////////////////////////////footer////////////////////////////////////////////////////
 
